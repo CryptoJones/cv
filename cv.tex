@@ -1,0 +1,239 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aaron K. Clark - Academic Curriculum Vitae
+%
+% Uses resume.cls (Trey Hunner / LaTeXTemplates.com), shared with the
+% companion resume repo so both documents render as siblings.
+%
+% Build: make        (or: pdflatex -interaction=nonstopmode cv.tex, twice)
+%
+% Scope note: this is the ACADEMIC CV. Industry-facing material lives in
+% github.com/CryptoJones/resume and is deliberately not duplicated here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume}
+
+\usepackage[left=0.75in,top=0.75in,right=0.75in,bottom=0.75in]{geometry}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\hypersetup{pageanchor=false, colorlinks=true, urlcolor=accent, linkcolor=accent}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+
+% Academic CVs run multiple pages: number them and carry the name on every
+% page after the first, so a detached sheet is still identifiable.
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\small Clark \textbar\ \thepage}
+\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[R]{\small Clark \textbar\ \thepage}}
+
+\name{Aaron K. Clark}
+
+\makeatletter
+\def\printname{%
+  \begin{center}%
+    {\MakeUppercase{\namesize\bf \@name}}%
+  \end{center}%
+  \nameskip
+}
+\makeatother
+
+% Contact deliberately limited to durable, public scholarly identifiers.
+% Phone and personal email are omitted: this PDF is served publicly from GitHub.
+\address{ORCID \href{https://orcid.org/0000-0002-6831-2663}{0000-0002-6831-2663} \\
+         ResearcherID \href{https://www.webofscience.com/wos/author/record/G-9804-2017}{G-9804-2017}}
+\address{\href{https://cryptojones.dev}{cryptojones.dev} \\ \href{https://github.com/CryptoJones}{github.com/CryptoJones}}
+
+
+% rSubsection expects \item bullets inside it; CV entries have none, so define
+% an equivalent that renders the same two-line layout with no list.
+\newcommand{\cventry}[4]{%
+  {\bf #1}\hfill{#2}\\
+  {\em #3}\hfill{\em #4}\par\smallskip
+}
+% Label and certificates on one line: a vertical list of five near-empty
+% blocks wasted most of a page.
+\newcommand{\certgroup}[2]{%
+  {\bf #1:} #2\par\vspace{0.25em}
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+\cventry{Eastern University}{2026 -- present}{Master's candidate, School of Mathematics and Computational Sciences}{St. Davids, Pennsylvania}
+
+\cventry{Rochester Institute of Technology}{2021}{MicroMasters (edX), Cybersecurity}{Rochester, New York}
+
+\cventry{Kennesaw State University}{2019}{Graduate Certificate, Computer Science Foundations}{Marietta, Georgia}
+
+\cventry{Colorado State University}{2018}{Graduate Certificate, Information Technology Project Management}{Fort Collins, Colorado}
+
+\cventry{University of Maryland University College}{2016}{Bachelor of Science, Computer and Information Science}{Adelphi, Maryland}
+
+\cventry{University of Maryland University College}{2013}{Undergraduate Certificate, Unix System Administration}{Adelphi, Maryland}
+
+\cventry{Purdue University}{2013}{Diploma, Entrepreneurship Bootcamp for Veterans with Disabilities}{West Lafayette, Indiana}
+
+\cventry{Defense Information School}{2004}{Diploma, Basic Public Affairs Specialist (Writer)}{Fort Meade, Maryland}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH INTERESTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Research Interests}
+Data privacy and the limits of informed consent in consumer data collection; large language models
+and retrieval-augmented generation; locally hosted inference as a privacy-preserving alternative to
+third-party AI services; applied machine learning; cybersecurity and security operations.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Publications}
+
+Adams, B., \textbf{Clark, A. K.}, \& Craven, J. (2020). \emph{It is Free and Always Will Be ---
+Trading Personal Information and Privacy for the Convenience of Online Services.} Kindle edition.
+ASIN \href{https://www.amazon.com/dp/B083R3155F}{B083R3155F}.
+
+\smallskip
+
+Adams, B., \textbf{Clark, A. K.}, \& Craven, J. (2018). \emph{It is Free and Always Will Be ---
+Trading Personal Information and Privacy for the Convenience of Online Services.} arXiv preprint.
+\href{https://doi.org/10.48550/arXiv.1804.08491}{doi:10.48550/arXiv.1804.08491}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Invited Talks and Presentations}
+
+``Introduction to the OWASP Top Ten.'' OWASP Omaha, Omaha, Nebraska. May 2021.
+
+\smallskip
+
+``Peeking into .NET Applications using dotPeek.'' DEFCON 402 (DC402), Omaha, Nebraska. July 2019.
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TEACHING
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Teaching Experience}
+
+\cventry{Harvard University}{2022}{Teaching Assistant, online computation course}{Remote}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL APPOINTMENTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Professional Appointments}
+
+\cventry{Ronin 48}{March 2026 -- present}{Principal Software Architect (contract); Graduate Machine Learning Intern (contract)}{Remote}
+
+\cventry{Black Hills Information Security / Active Countermeasures}{March -- November 2024}{Senior Developer}{Remote}
+
+\cventry{CrowdStrike}{August 2022 -- March 2024}{Senior Technical Support Engineer}{Remote}
+
+\cventry{CloudHesive}{August 2021 -- May 2022}{Cloud Operations Supervisor; Cloud Support Engineer II}{Remote}
+
+\cventry{Tmutla}{February -- August 2021}{Cybersecurity Consultant (self-employed)}{Remote}
+
+\cventry{Reinke Manufacturing Company}{December 2015 -- February 2021}{Senior Developer}{Deshler, Nebraska}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	HONORS AND AWARDS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Honors and Awards}
+President's Grant, University of Maryland University College --- 2012
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL SERVICE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Professional Service}
+
+\begin{list}{$\cdot$}{\leftmargin=1em \itemsep -0.3em}
+\item OPFOR (Red Team) Team Lead, Cyber Shield --- 2021
+\item Room Watcher, National Collegiate Penetration Testing Competition --- 2021
+\item Professional Mentor, Women in CyberSecurity (WiCyS) --- 2021
+\item Professional Mentor, Operation Code --- 2015--2019
+\end{list}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	MEMBERSHIPS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Professional Memberships}
+Association for Computing Machinery (ACM) $\cdot$ American Physical Society (APS) $\cdot$
+Open Web Application Security Project (OWASP) $\cdot$ Military Cyber Professionals Association $\cdot$
+DEFCON 402 (DC402) $\cdot$ Rochester Institute of Technology Security Club
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Professional Certifications}
+
+\certgroup{Amazon Web Services}{Solutions Architect -- Associate (2022) $\cdot$ Certified Cloud Practitioner (2021)}
+
+\certgroup{(ISC)\textsuperscript{2}}{Systems Security Certified Practitioner (2021)}
+
+\certgroup{Microsoft}{Specialist, Programming in C\# (2016) $\cdot$ MCSA, Windows Server 2008 (2012) $\cdot$
+MCITP, Server Administrator on Windows Server 2008 (2012) $\cdot$ Microsoft Certified Professional (2010)}
+
+\certgroup{Cisco}{Cisco Certified Network Associate (2001)}
+
+\certgroup{CompTIA}{A+ (2001) $\cdot$ Network+ (2001)}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	JOURNALISM
+%----------------------------------------------------------------------------------------
+
+\needspace{11\baselineskip}
+\begin{rSection}{Journalism}
+
+Reported and written as a United States Marine Corps public affairs specialist; published by
+Marine Corps News.
+
+\begin{list}{$\cdot$}{\leftmargin=1em \itemsep -0.3em}
+\item ``Hagee retires, Conway appointed 34th commandant.'' 14 November 2006.
+\item ``Folklore! Tradition! Change?'' 24 February 2006.
+\item ``Marine company retires guidon at United States Naval Academy.'' 15 January 2006.
+\item ``Marine receives Silver Star medal for combat valor.'' 28 October 2005.
+\item ``Marine serves two-year hitch in Corps.'' 23 June 2005.
+\item ``House, Senate help Corps celebrate 229th.'' 1 November 2004.
+\end{list}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	MILITARY SERVICE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Military Service}
+United States Marine Corps --- Public Affairs Specialist (Writer). Honorably discharged.
+\end{rSection}
+
+\end{document}
